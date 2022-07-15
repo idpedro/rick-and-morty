@@ -1,0 +1,42 @@
+:root {
+  --green-500: #59a14b;
+  --green-400: #77d03d;
+  --green-350: #d4e949;
+  --blue-350: #72e2d4;
+  --red-500: rgb(202, 10, 10);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: monospace;
+
+  background-color: var(--green-350);
+  background-image: radial-gradient(
+      circle at center center,
+      var(--green-400),
+      var(--green-350)
+    ),
+    repeating-radial-gradient(
+      circle at center center,
+      var(--green-400),
+      var(--green-400),
+      40px,
+      transparent 80px,
+      transparent 40px
+    );
+  background-blend-mode: multiply;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
