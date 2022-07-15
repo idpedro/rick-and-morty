@@ -1,0 +1,70 @@
+.main__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  > div > input {
+    margin: 2rem;
+    font-size: 2rem;
+    padding: 0.8rem;
+    border-radius: 1.5rem;
+    border: none;
+    background: var(--green-350);
+    color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 0.5rem 0.2rem rgba(0, 0, 0, 0.2) inset;
+  }
+  > div > button {
+    color: rgba(0, 0, 0, 0.8);
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 4000px;
+    box-shadow: 0 0 0.5rem 0.2rem var(--blue-350);
+    border: none;
+    background: var(--blue-350);
+    font-weight: bold;
+    &:disabled {
+      opacity: 0.4;
+      box-shadow: none;
+      box-shadow: 0 0 0.5rem 0.2rem rgba(0, 0, 0, 0.2) inset;
+    }
+  }
+}
+.card__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  @media screen and (max-width: 1366px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 960px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.life__status:global {
+  position: absolute;
+  flex: 1;
+  right: 1.6rem;
+  top: 1.6rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 400rem;
+  user-select: none;
+  color: transparent;
+  box-shadow: 0 0 0.5rem 0.2rem rgba(0, 0, 0, 0.2) inset;
+
+  &.alive {
+    background: var(--green-350);
+    box-shadow: 0 0 0.8rem 0.4rem var(--green-350),
+      0 0 0.5rem 0.2rem rgba(0, 0, 0, 0.2) inset;
+  }
+  &.dead {
+    background: var(--red-500);
+    box-shadow: 0 0 0.8rem var(--red-500),
+      0 0 0.5rem 0.2rem rgba(0, 0, 0, 0.2) inset;
+  }
+  &.unknown {
+    background: gray;
+  }
+}
