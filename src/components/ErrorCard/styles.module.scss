@@ -1,0 +1,22 @@
+.error {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  display: flex;
+  padding: 2rem;
+  box-shadow: 0 0 0.5rem 0.2rem rgba(0, 0, 0, 0.2) inset;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: linear-gradient(
+      rgba(212, 233, 73, 0.2) 1px,
+      transparent 3px
+    ),
+    linear-gradient(
+      to left,
+      rgba(212, 233, 73, 0.2) 1px,
+      rgba(0, 0, 0, 0.5) 1px
+    );
+  background-size: 50px 50px;
+  border-radius: 0.8rem;
+  color: #fff;
+}
